@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/adv_style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Advanced Search</title>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Google Search</a></li>
+        <li><a href="Image.html">Google Image Search</a></li>
+    </ul>
+    <div id=image>
+        <img src="Google_logo.png" alt="" width="100px">
+    </div>
+    <div id=header>
+        <h4>Advanced search</h4>
+    </div>
+    <hr>
+    <form action="https://www.google.com/search">
+        <div class=form>
+            Find  pages with..
+        </div><br><br>
+        <div class=form>
+            all these words: <input type="text" id="move" name=as_q><br><br>
+        </div>
+        <div class=form>
+            this exact word or phrase: <input type="text"  id="move1" name=as_epq><br><br>
+        </div>
+        <div class=form>
+            any of these words: <input type="text" id="move2" name=as_oq><br><br>
+        </div>
+        <div class=form>
+            none of these words: <input type="text" id="move3" name="as_eq"><br><br>
+        </div>
+        <button class="btn btn-primary">Advanced search</button>
+    </form>
+</body>
+</html>

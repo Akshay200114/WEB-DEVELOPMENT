@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Image search</title>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Google Search</a></li>
+        <li><a href="advanced.html">Google Advanced Search</a></li>
+    </ul>
+    <div>
+        <img src="Google_logo.png" alt="google Logo" width=300px>
+    </div>
+
+    <div>
+        <form action="https://www.google.com/search" method='GET'>
+            <div class=form>
+                <i class="glyphicon glyphicon-search"></i>
+                <input style="font-size:15px;margin-top:3px; margin-left:7px" type="text" name="q">
+            </div>
+            <input type="hidden" name=tbm value=isch >
+            <input type="hidden" name=biw value=1536>
+            <input type="hidden" name="bih" value=790>
+            <div id=button>
+                <button>Google Image Search</button>
+            </div>
+            
+        </form>
+        
+    </div>
+</body>
+</html>

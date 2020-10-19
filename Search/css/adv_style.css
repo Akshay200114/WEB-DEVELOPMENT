@@ -1,0 +1,81 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-size: 15px;
+  }
+  
+li{
+  float: right;
+}
+  
+li a{
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: solid;
+}
+  
+  /* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color:yellow;
+    color: grey;
+}
+#image{
+    display: flex;
+    margin-top: 0px;
+    background: silver;
+}
+#image img{
+    padding: 10px;
+    margin-left: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#header{
+    position: relative;
+    left: 20px;
+    color: red;
+    margin-top: 20px;
+}
+.form{
+    position: relative;
+    left: 50px;
+}
+#move{
+    position: relative;
+    left: 85px;
+    width: 250px;
+    border: 2px solid grey;
+
+}
+#move1{
+    position: relative;
+    left: 13.3px;
+    width: 250px;
+    border: 2px solid grey;
+}
+#move2{
+    position: relative;
+    left: 57px;
+    width: 250px;
+    border: 2px solid grey;
+
+}
+#move3{
+    position: relative;
+    left: 47px;
+    width: 250px;
+    border: 2px solid grey;
+
+}
+#move1:hover, #move2:hover, #move3:hover,#move:hover{
+    border-color: blue;
+}
+button{
+    position: relative;
+    left: 358px;
+}
