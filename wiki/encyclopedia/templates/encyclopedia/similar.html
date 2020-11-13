@@ -1,0 +1,26 @@
+{% extends 'encyclopedia/layout.html' %}
+
+{% block title %}
+Similar
+{% endblock %}
+
+{% block body %}
+
+{% if similar %}
+<h1>{{ similar | safe }}</h1>
+{% endif %}
+
+{% if error %}
+<hr>
+<h2>{{ error | safe }}</h2>
+<hr>
+{% endif %}
+
+{% for entry in entries %}
+<ul>
+    <li><a href="../wiki/{{ entry }}">{{ entry }}</a></li>
+</ul>
+
+{% endfor %}
+{% endblock %}
+

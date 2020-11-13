@@ -1,0 +1,14 @@
+{% extends 'encyclopedia/layout.html' %}
+
+{% block title %}
+Existence
+{% endblock %}
+
+{% block body %}
+<hr>
+{% if error %}
+<h1 style="color:gray;"> {{ error }} in the Entries. </h1>
+{% endif %}
+<hr>
+
+{% endblock %}
