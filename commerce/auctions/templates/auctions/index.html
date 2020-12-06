@@ -1,0 +1,18 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Active Listings</h2>
+    {% for lis in List %}
+    <div>
+        <a href="{% url 'show' lis.Title %}">
+            {{ lis.Title }} <br>
+        <img src="{{ lis.Image }}" alt="No Image for this " width="250px" height="200px"> <br>
+        Initial bid: ${{ lis.bid }} <br>
+        Description: {{ lis.Description}}
+        <br>
+        {{ lis.created_at }} <br>
+        </a>
+    </div><br>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,10 @@
+.navigate{
+    background-image: linear-gradient(yellow, green);
+}
+
+.navigate h1{
+    padding: 15px;
+}
+.navigate .arrange{
+    padding-left: 15px;
+}

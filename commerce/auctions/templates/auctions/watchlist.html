@@ -1,0 +1,19 @@
+{% extends "auctions\layout.html" %}
+
+{% block title %}
+Watchlist
+{% endblock %}
+
+{% block body %}
+{% for watchlist in watchlists %}
+<div>
+    <a href="{% url 'show' watchlist.watchlist.Title %}">
+        {{ watchlist.watchlist.Title }} <br>
+    <img src="{{ watchlist.watchlist.Image }}" alt="No Image for this " width="250px" height="200px"> <br>
+    Initial bid: ${{ watchlist.watchlist.bid }} <br>
+    Description: {{ watchlist.watchlist.Description}}
+    <br>
+    {{ watchlist.watchlist.created_at }} <br>
+    </a>
+{% endfor %}
+{% endblock %}

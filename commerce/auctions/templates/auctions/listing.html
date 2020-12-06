@@ -1,0 +1,70 @@
+{% extends "auctions/layout.html" %}
+
+{% block title %}
+Listing_info
+{% endblock %}
+
+{% block body %}
+<h1>{{ curr_listing.Title }}</h1>
+<div>
+    {% if curr_listing.active %}
+       {% if check == 0 %}
+            <form action="{% url 'show' curr_listing.Title %}" method="POST">
+                {% csrf_token %}
+                <input type="submit" class="btn btn-secondary" name="watchlist_add" value="Add to WatchList">
+            </form>
+        {% else %}
+            <form action="{% url 'show' curr_listing.Title %}" method="POST">
+                {% csrf_token %}
+                <input type="submit" name="watchlist_rm" class='btn btn-secondary' value="Remove From WatchList">
+            </form>
+        {% endif %}
+    {% endif %}
+</div>
+<div>
+    {% if curr_listing.active %}
+        {% if request.user == curr_listing.user %}
+            <form action="{% url 'show' curr_listing.Title %}" method="POST">
+                {% csrf_token %}
+                <input type="submit" value="Close Auction" class="btn btn-warning" name="close_List">
+            </form>
+        {% endif %}
+    {% endif %}
+
+</div>
+<div>
+   <img src="{{ curr_listing.Image}}" alt="No Preview image available" width=500px height="300px"> 
+</div>
+<div>
+    <p>Item_description: {{curr_listing.Description }}</p>
+    <p>Created at {{curr_listing.created_at}}</p>
+   <p>Current_bid: ${{ high_bid }}</p> 
+   <p>Listed by <b>{{curr_listing.created_by}}</b></p>
+   
+</div>
+<div>
+    <form action="{% url 'show' curr_listing.Title %}" method="POST">
+        {% csrf_token %}
+        <input type="number" name="bids" id="" placeholder="Bid Value" min="{{high_bid.bid|add:'1'}}">
+        <input type="submit" class="btn btn-primary" value="Bid" name=add_bid>
+    </form>
+</div>
+
+<div>
+    <hr>
+    <h2>Comment Section</h2>
+    <hr>
+    {% if Comment == 0 %}
+        <b>No comments Yet On this Item</b>
+    {% else %}
+        {% for comment in comments %}
+        <div>{{ comment.comment }} <b>by {{ comment.user_comment }}</b> </div>
+        {% endfor %}
+    {% endif %}
+    <form action="{% url 'show' curr_listing.Title %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name=comment  placeholder="Comment Here" >
+        <input type="submit" value=Comment class="btn btn-primary" name=addcomment>
+    </form>
+</div>
+{% endblock %}
